@@ -1,0 +1,18 @@
+
+  .gallery_img {
+    height: 100px;
+    left: 0;
+    offset-path: path('m 0 50 q 50-0 100-0 t 100 0 100 0 100-0 100 0');
+    box-shadow: 1px 1px 3px #0008;
+    transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84),box-shadow .3s, z-index .3s;
+    z-index: 1;
+  }
+  
+  /* .gallery_img:hover {
+    transform: scale(3);
+    offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
+    box-shadow: 3px 4px 10px #0006;
+    transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84),box-shadow .3s, z-index .3s;
+    z-index: 999;
+  } */
+  
