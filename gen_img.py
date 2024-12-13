@@ -91,7 +91,7 @@ if __name__ == "__main__":
                     transition: transform 0.3s ease;
                 }
                 .gallery img:hover {
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                 }
             </style>
         </head>
