@@ -32,7 +32,7 @@ def classify_color(dominant_color):
 
 if __name__ == "__main__":
 
-    image_folder = "images/photos"
+    image_folder = "gallery_photos"
     image_files = glob(f"{image_folder}/*.png") + glob(f"{image_folder}/*.jpeg")
 
     for image_file in tqdm(image_files):
@@ -46,7 +46,7 @@ if __name__ == "__main__":
         os.makedirs(dst, exist_ok=True)
         os.system(f"mv {src} {dst}")
 
-    photos = sorted(glob("images/photos/*/*"))
+    photos = sorted(glob("gallery_photos/*/*"))
     #   k=7
     #   res = """<div class="rows is-mobile is-centered">"""
     #   for i in range(0, len(photos), k):
