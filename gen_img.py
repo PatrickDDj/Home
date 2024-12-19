@@ -15,19 +15,19 @@ def get_dominant_color(image):
 def classify_color(dominant_color):
     hue = cv2.cvtColor(np.uint8([[dominant_color]]), cv2.COLOR_BGR2HSV)[0][0][0]
     if hue < 15 or hue > 330:
-        return "0-red"
+        return "01-red", hue
     elif hue < 45:
-        return "1-orange"
+        return "02-orange", hue
     elif hue < 75:
-        return "2-yellow"
+        return "03-yellow", hue
     elif hue < 165:
-        return "3-green"
+        return "04-green", hue
     elif hue < 195:
-        return "4-cyan"
+        return "00-cyan", hue
     elif hue < 255:
-        return "5-blue"
+        return "05-blue", hue
     else:
-        return "6-purple"
+        return "06-purple", hue
 
 
 if __name__ == "__main__":
@@ -39,12 +39,13 @@ if __name__ == "__main__":
         src = image_file
         image = cv2.imread(src)
         dominant_color = get_dominant_color(image)
-        color_class = classify_color(dominant_color)
+        color_class, hue = classify_color(dominant_color)
         print(f"The image {image_file} is classified as {color_class}.")
 
         dst = os.path.join(image_folder, color_class)
+        filename = '{hue}-{filename}'.format(hue="{:0>3d}".format(hue), filename=image_file.split('/')[-1])
         os.makedirs(dst, exist_ok=True)
-        os.system(f"mv {src} {dst}")
+        os.system(f"mv {src} {dst}/{filename}")
 
     photos = sorted(glob("gallery_photos/*/*"))
     #   k=7
