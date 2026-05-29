@@ -1,511 +1,504 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="images/icon.svg" type="image/svg+xml">
-    <title>Dadong Jiang</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dadong Jiang — Personal Homepage</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #222;
+      background: #fff;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+    /* ── Header ── */
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
 
-      gtag("js", new Date());
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
 
-      gtag("config", "G-PYVRSFMDRL");
-    </script>
+    .social-links {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-      rel="stylesheet"
-    />
+    .social-links a {
+      color: #555;
+      text-decoration: none;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s;
+    }
 
-    <link rel="stylesheet" href="./static/css/bulma.min.css" />
-    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css" />
-    <link rel="stylesheet" href="./static/css/bulma-slider.min.css" />
-    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
-    <link rel="stylesheet" href="./static/css/index.css" />
+    .social-links a:hover { color: #000; }
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="./static/js/fontawesome.all.min.js"></script>
-    <script src="./static/js/bulma-carousel.min.js"></script>
-    <script src="./static/js/bulma-slider.min.js"></script>
-    <script src="./static/js/index.js"></script>
+    .social-links svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
 
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"
-    ></script>
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #e8e8e8;
+    }
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-      rel="stylesheet"
-    />
+    .intro {
+      text-align: center;
+      color: #444;
+      max-width: 580px;
+    }
 
-    <link rel="stylesheet" href="./staticcss/bulma.min.css" />
-    <link rel="stylesheet" href="./staticcss/bulma-carousel.min.css" />
-    <link rel="stylesheet" href="./staticcss/fontawesome.all.min.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
-    />
-    <link rel="stylesheet" href="./staticcss/index.css" />
+    .intro .research-areas {
+      font-style: italic;
+      color: #666;
+      margin-top: 4px;
+      font-size: 0.9rem;
+    }
 
+    .intro-links {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script defer src="./staticjs/fontawesome.all.min.js"></script>
-    <script src="./staticjs/bulma-slider.min.js"></script>
-    <script src="./staticjs/index.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-   
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    .intro-links a {
+      font-size: 0.85rem;
+      color: #1a73e8;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
 
-    <script
-      type="module"
-      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"
-    ></script>
-  </head>
-  <body>
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <div class="columns is-centered">
-            <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">
-                Welcome to Dondon's Page!
-              </h1>
-              <a
-                href="mailto:patrickddj7@gmail.com"
-                title="email"
-                style="font-size: 30px"
-                ><i class="fas fa-envelope"></i
-              ></a>
-              &nbsp;&nbsp;
-              <a href="images/wechat.JPG"
-                ><i class="fab fa-weixin" style="font-size: 30px"></i
-              ></a>
-              &nbsp;&nbsp;
-              <a href="https://github.com/PatrickDDj?tab=repositories"
-                ><i class="fab fa-github" style="font-size: 30px"></i
-              ></a>
-              &nbsp;&nbsp;
-              <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=-XtvDQ0AAAAJ"
-                ><i class="ai ai-google-scholar" style="font-size: 30px"></i
-              ></a>
-              
-            </div>
-          </div>
+    .intro-links a:hover { text-decoration: underline; }
+
+    /* ── Sections ── */
+    section { margin-top: 40px; }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e0e0e0;
+      margin: 0 0 22px;
+    }
+
+    section h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #111;
+    }
+
+    /* ── Education / Experience ── */
+    .entry-list { display: flex; flex-direction: column; gap: 18px; }
+
+    .entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .entry-logo {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      border-radius: 6px;
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      overflow: hidden;
+    }
+
+    .entry-logo img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+
+    .entry-body h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .entry-body .meta {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 1px;
+    }
+
+    /* ── Publications ── */
+    .pub-list { display: flex; flex-direction: column; gap: 22px; }
+
+    .pub {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .pub-thumb {
+      width: 120px;
+      height: 80px;
+      flex-shrink: 0;
+      background: #f0f0f0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .pub-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .pub-body h3 {
+      font-size: 0.93rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .pub-body .authors {
+      font-size: 0.83rem;
+      color: #555;
+      margin-top: 3px;
+    }
+
+    .pub-body .authors strong { color: #222; }
+
+    .pub-body .venue {
+      font-size: 0.83rem;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    .pub-links {
+      display: flex;
+      gap: 8px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .pub-links a {
+      font-size: 0.78rem;
+      color: #1a73e8;
+      text-decoration: none;
+      border: 1px solid #c5d8f8;
+      border-radius: 3px;
+      padding: 1px 8px;
+      transition: background 0.15s;
+    }
+
+    .pub-links a:hover { background: #e8f0fe; }
+
+    /* ── Projects ── */
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+    }
+
+    .project-card {
+      border: 1px solid #e4e4e4;
+      border-radius: 8px;
+      padding: 14px 16px;
+      transition: box-shadow 0.15s;
+    }
+
+    .project-card:hover { box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+
+    .project-card h3 {
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .project-card p {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 5px;
+      line-height: 1.5;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .project-links a {
+      font-size: 0.78rem;
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .project-links a:hover { text-decoration: underline; }
+
+    .project-card img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      background: #f0f0f0;
+    }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 540px) {
+      .pub { flex-direction: column; }
+      .pub-thumb { width: 100%; height: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header>
+  <h1>Dadong Jiang</h1>
+
+  <!-- <div class="social-links">
+    <a href="mailto:patrickddj7@gmail.com" title="Email">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      Email
+    </a>
+    <a href="https://github.com/PatrickDDj?tab=repositories" target="_blank" title="GitHub">
+      <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.42 7.88 10.95.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 2.87-.39c.97 0 1.95.13 2.87.39 2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+      GitHub
+    </a>
+    <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=-XtvDQ0AAAAJ" target="_blank" title="Google Scholar">
+      <svg viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18V17c0 2.76 3.13 5 7 5s7-2.24 7-5v-5.82L21 9l-9-6zm5 13c0 1.66-2.24 3-5 3s-5-1.34-5-3v-4.4l5 2.73 5-2.73V16zm-5-4.27L4.53 9 12 4.27 19.47 9 12 11.73z"/></svg>
+      Google Scholar
+    </a>
+  </div> -->
+
+  <img class="avatar" src="https://patrickddj.github.io/Home/images/me.jpeg" alt="Dadong Jiang" onerror="this.style.display='none'" />
+
+  <div class="social-links">
+    <a href="mailto:patrickddj7@gmail.com" title="Email">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      Email
+    </a>
+    <a href="https://github.com/PatrickDDj?tab=repositories" target="_blank" title="GitHub">
+      <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.42 7.88 10.95.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 2.87-.39c.97 0 1.95.13 2.87.39 2.18-1.49 3.14-1.18 3.14-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.7 5.38-5.27 5.67.42.36.79 1.07.79 2.15v3.19c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+      GitHub
+    </a>
+    <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&user=-XtvDQ0AAAAJ" target="_blank" title="Google Scholar">
+      <svg viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18V17c0 2.76 3.13 5 7 5s7-2.24 7-5v-5.82L21 9l-9-6zm5 13c0 1.66-2.24 3-5 3s-5-1.34-5-3v-4.4l5 2.73 5-2.73V16zm-5-4.27L4.53 9 12 4.27 19.47 9 12 11.73z"/></svg>
+      Google Scholar
+    </a>
+  </div>
+
+  <div class="intro">
+    <!-- <p>Master's Graduate from <strong>Tianjin University</strong></p> -->
+    <p class="research-areas">3D Reconstruction / Editing / Generation, Real-Time Rendering / Transmission</p>
+    <div class="intro-links">
+      <a href="gallery.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H3V5h18v14zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+        Gallery
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ── Education ── -->
+<section>
+  <hr />
+  <h2>Education</h2>
+  <div class="entry-list">
+    <div class="entry">
+      <div class="entry-logo"><img src="images/tju.png" alt="Tianjin University" /></div>
+      <div class="entry-body">
+        <h3>M.S. in Computer Science and Technology</h3>
+        <div class="meta">Tianjin University &nbsp;·&nbsp; 2022.6 – 2025.3</div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-logo"><img src="images/cqu.png" alt="Chongqing University" /></div>
+      <div class="entry-body">
+        <h3>B.Eng. in Computer Science and Technology</h3>
+        <div class="meta">Chongqing University &nbsp;·&nbsp; 2018.9 – 2022.6</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Experience ── -->
+<section>
+  <hr />
+  <h2>Experience</h2>
+  <div class="entry-list">
+    <div class="entry">
+      <div class="entry-logo"><img src="images/tencent.png" alt="Tencent" /></div>
+      <div class="entry-body">
+        <h3>Hunyuan 3D AIGC Researcher — Intern</h3>
+        <div class="meta">Tencent, Technology Engineering Group (TEG) &nbsp;·&nbsp; 2023.12 – 2024.8 &nbsp;·&nbsp; Shenzhen</div>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="entry-logo"><img src="images/tencent.png" alt="Tencent" /></div>
+      <div class="entry-body">
+        <h3>Tencent Cloud Backend Development — Intern</h3>
+        <div class="meta">Tencent, Cloud &amp; Smart Industries Group (CSIG) &nbsp;·&nbsp; 2021.8 – 2022.1 &nbsp;·&nbsp; Shenzhen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Publications ── -->
+<section>
+  <hr />
+  <h2>Publications</h2>
+  <div class="pub-list">
+
+    <div class="pub">
+      <div class="pub-thumb"><img src="images/timeformer.png" alt="TimeFormer" /></div>
+      <div class="pub-body">
+        <h3>TimeFormer: Capturing Temporal Relationships of Deformable 3D Gaussians for Robust Reconstruction</h3>
+        <div class="authors"><strong>Dadong Jiang</strong>, Zhi Hou, Zhihui Ke, Xianghui Yang, Xiaobo Zhou</div>
+        <div class="venue">ICCV 2025</div>
+        <div class="pub-links">
+          <a href="https://patrickddj.github.io/TimeFormer/" target="_blank">Project Page</a>
+          <a href="https://arxiv.org/abs/2411.11941" target="_blank">Paper</a>
+          <a href="https://github.com/PatrickDDj/TimeFormer-Code" target="_blank">Code</a>
         </div>
       </div>
-    </section>
-    <section class="hero" id="teaser">
-      <div class="container is-max-desktop">
-        <div class="row is-mobile is-centered">
-          <div class="columns is-mobile is-centered">
-            <div class="column is-one-quarter">
-              <img src="images/me.jpeg" style="width: 180px" />
-            </div>
-            <div class="column is-four-fifths is-centered has-text-justified">
-              <p>
-                I am Dadong, you may also call
-                me PatrickDD. My research fields include Computer Graphics and
-                Computer Vision. 
-                Specifically, I focus on:
-                <b
-                  >
+    </div>
 
-                  <!-- (1) Deformable 3DGS Reconstruction, (2) Dynamic NeRF Editing, (3) Texture Generation, (4)
-                  Real-Time Rendering & Transmission (VR) -->
-                  3D Reconstruction / Editing / Generation, 
-
-                  Real-Time Rendering / Transmission
-                  </b
-                >
-
-                <br />
-                <br />
-                See my <b><a href="./index_image_gallery.html">Image Gallery</a></b> and <b><a href="./index_diary.html">Diary</a></b>.
-                
-              </p>
-            </div>
-          </div>
+    <div class="pub">
+      <div class="pub-thumb"><img src="images/flexitex.jpg" alt="FlexiTex" /></div>
+      <div class="pub-body">
+        <h3>FlexiTex: Enhancing Texture Generation via Visual Guidance</h3>
+        <div class="authors"><strong>Dadong Jiang</strong>, Xianghui Yang, Zibo Zhao, Sheng Zhang, Jiaao Yu, Zeqiang Lai, Shaoxiong Yang, Chunchao Guo, Xiaobo Zhou, Zhihui Ke</div>
+        <div class="venue">AAAI 2025</div>
+        <div class="pub-links">
+          <a href="https://patrickddj.github.io/FlexiTex/" target="_blank">Project Page</a>
+          <a href="https://arxiv.org/abs/2409.12431" target="_blank">Paper</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <br />
-
-
-    <section class="hero" id="teaser">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-1">Education</h2>
-        </div>
-        <div class="row is-mobile is-centered">
-          <div class="columns is-mobile is-centered">
-            <div class="column is-mobile is-centered">
-              <img src="images/tju.png" style="width: 80px; height: 80px" />
-            </div>
-            <div class="column is-four-fifths">
-              <h2 class="title is-4">2022.6 - 2025.3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tianjin University</h2>
-              <p>Master, Computer Science and Technology</p>
-            </div>
-          </div>
-        </div>
-        <br />
-        <div class="row is-mobile is-centered">
-          <div class="columns is-mobile is-centered">
-            <div class="column is-mobile is-centered">
-              <img src="images/cqu.png" style="width: 80px; height: 80px" />
-            </div>
-            <div class="column is-four-fifths">
-              <h2 class="title is-4">2018.9 - 2022.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chongqing University</h2>
-              <p>Bachelor, Computer Science and Technology</p>
-            </div>
-          </div>
+    <div class="pub">
+      <div class="pub-thumb"><img src="images/4d_editor.jpg" alt="4D-Editor" /></div>
+      <div class="pub-body">
+        <h3>4D-Editor: Interactive Object-level Editing in Dynamic Neural Radiance Fields via Semantic Distillation</h3>
+        <div class="authors"><strong>Dadong Jiang</strong>, Zhihui Ke, Xiaobo Zhou, Xidong Shi, Hao Yan</div>
+        <div class="venue">3DV 2025</div>
+        <div class="pub-links">
+          <a href="https://patrickddj.github.io/4D-Editor/" target="_blank">Project Page</a>
+          <a href="https://arxiv.org/abs/2310.16858" target="_blank">Paper</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <br /><br />
-
-    <section class="hero" id="teaser">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-1">Experience</h2>
-        </div>
-        <div class="row is-mobile is-centered">
-          <div class="columns is-mobile is-centered">
-            <div class="column is-mobile is-centered">
-              <img
-                src="images/tencent.png"
-                style="width: 100px; height: 100px"
-              />
-            </div>
-            <div class="column is-four-fifths">
-              <h2 class="title is-4">
-                Technology Engineering Group (TEG)
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2023.12 - 2024.8
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shenzhen
-              </h2>
-              <p>Hunyuan 3D AIGC Researcher (Intern)</p>
-            </div>
-          </div>
-        </div>
-        <div class="row is-mobile is-centered">
-          <div class="columns is-mobile is-centered">
-            <div class="column is-mobile is-centered">
-              <img
-                src="images/tencent.png"
-                style="width: 100px; height: 100px"
-              />
-            </div>
-            <div class="column is-four-fifths">
-              <h2 class="title is-4">
-                Cloud & Smart Industries Group (CSIG)
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2021.8 - 2022.1
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shenzhen
-              </h2>
-              <p>Tencent Cloud Backend Development (Intern)</p>
-            </div>
-          </div>
+    <div class="pub">
+      <div class="pub-thumb"><img src="images/ds-nerv.png" alt="DS-NeRV" /></div>
+      <div class="pub-body">
+        <h3>DS-NeRV: Implicit Neural Video Representation with Decomposed Static and Dynamic Codes</h3>
+        <div class="authors">Hao Yan, Zhihui Ke, Xiaobo Zhou, Tie Qiu, Xidong Shi, <strong>Dadong Jiang</strong></div>
+        <div class="venue">CVPR 2024</div>
+        <div class="pub-links">
+          <a href="https://haoyan14.github.io/DS-NeRV/" target="_blank">Project Page</a>
+          <a href="https://arxiv.org/abs/2403.15679" target="_blank">Paper</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <br /><br />
-
-    <section class="hero" id="teaser">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-1">Publications</h2>
-        </div>
-
-        <div class="rows is-mobile is-centered">
-          <div class="row is-mobile is-centered">
-            <div class="columns is-mobile is-centered">
-              <div class="column is-mobile is-centered">
-                <img
-                  src="images/timeformer.png"
-                  style="width: 300px; margin-top: 20px;"
-                />
-              </div>
-              <div class="column is-two-thirds">
-                <h2 class="title is-4">
-                  TimeFormer: Capturing Temporal Relationships of Deformable 3D Gaussians for Robust Reconstruction
-                </h2>
-                <p style="color: grey">
-                  <b>Dadong Jiang</b>,  <a style="color: grey" href="https://zhihou7.github.io/">Zhi Hou*</a>,
-                  Zhihui Ke, <a style="color: grey" href="https://wi-sc.github.io/xianghui-yang/"
-                  >Xianghui Yang</a
-                >, <a style="color: grey" href="https://liaex.github.io/">Xiaobo Zhou*</a>
-                </p>
-                <p>Accepted by <b>ICCV 2025</b></p>
-                <a href="https://patrickddj.github.io/TimeFormer/">Project</a> / <a href="https://arxiv.org/abs/2411.11941">Paper</a> / <a href="https://github.com/PatrickDDj/TimeFormer-Code">Code</a>
-                <!-- [<a href="https://arxiv.org/abs/2409.12431">Paper</a>] -->
-                 
-              </div>
-            </div>
-          </div>
-          <br />
-
-        <div class="rows is-mobile is-centered">
-          <div class="row is-mobile is-centered">
-            <div class="columns is-mobile is-centered">
-              <div class="column is-mobile is-centered">
-                <img
-                  src="images/flexitex.jpg"
-                  style="width: 300px; margin-top: 20px;"
-                />
-              </div>
-              <div class="column is-two-thirds">
-                <h2 class="title is-4">
-                  FlexiTex: Enhancing Texture Generation via Visual Guidance
-                </h2>
-                <p style="color: grey">
-                  <b>Dadong Jiang</b>,
-                  <a style="color: grey" href="https://wi-sc.github.io/xianghui-yang/"
-                    >Xianghui Yang</a
-                  >, <a style="color: grey" href="https://maikouuu.github.io/">Zibo Zhao</a>, Sheng
-                  Zhang, Jiaao Yu, 
-                  <a style="color: grey" href="https://zeqiang-lai.github.io/">Zeqiang Lai</a>
-                  , Shaoxiong Yang, Chunchao Guo*, <a style="color: grey" href="https://liaex.github.io/">Xiaobo Zhou*</a>, Zhihui Ke
-                </p>
-                <p>Accepted by <b>AAAI 2025</b></p>
-                <a href="https://patrickddj.github.io/FlexiTex/">Project</a> /
-                <a href="https://arxiv.org/abs/2409.12431">Paper</a>
-              </div>
-            </div>
-          </div>
-          <br />
-          <div class="row is-mobile is-centered">
-            <div class="columns is-mobile is-centered">
-              <div class="column is-mobile is-centered">
-                <img
-                  src="images/4d_editor.jpg"
-                  style="width: 300px; margin-top: 20px;"
-                />
-              </div>
-              <div class="column is-two-thirds">
-                <h2 class="title is-4">
-                  4D-Editor: Interactive Object-level Editing in Dynamic Neural
-                  Radiance Fields via Semantic Distillation
-                </h2>
-                <p style="color: grey">
-                  <b>Dadong Jiang</b>, Zhihui Ke,
-                  <a style="color: grey" href="https://liaex.github.io/">Xiaobo Zhou*</a>, Xidong
-                  Shi, Hao Yan
-                </p>
-                <p>Accepted by <b>3DV 2025</b></p>
-                <a href="https://patrickddj.github.io/4D-Editor/">Project</a> /
-                <a href="https://arxiv.org/abs/2310.16858">Paper</a>
-              </div>
-            </div>
-          </div>
-          <br />
-
-          <div class="row is-mobile is-centered">
-            <div class="columns is-mobile is-centered">
-              <div class="column is-mobile is-centered">
-                <img
-                  src="images/ds-nerv.png"
-                  style="width: 300px; margin-top: 20px;"
-                />
-              </div>
-              <div class="column is-two-thirds">
-                <h2 class="title is-4">
-                  DS-NeRV: Implicit Neural Video Representation with Decomposed
-                  Static and Dynamic Codes
-                </h2>
-                <p style="color: grey">
-                  Hao Yan, Zhihui Ke,
-                  <a style="color: grey" href="https://liaex.github.io/">Xiaobo Zhou*</a>,
-                  <a style="color: grey" href="https://cic.tju.edu.cn/faculty/qiutie/index.html"
-                    >Tie Qiu</a
-                  >, Xidong Shi, <b>Dadong Jiang</b>
-                </p>
-                <!-- [<a href="https://patrickddj.github.io/FlexiTex/">Project</a>] -->
-                <p>Accepted by <b>CVPR 2024</b></p>
-                <a href="https://haoyan14.github.io/DS-NeRV/">Project</a> / <a
-                  href="https://arxiv.org/abs/2403.15679"
-                  >Paper</a
-                >
-              </div>
-            </div>
-          </div>
-          <br />
-
-          <div class="row is-mobile is-centered">
-            <div class="columns is-mobile is-centered">
-              <div class="column is-mobile is-centered">
-                <img
-                  src="images/collabvr.png"
-                  style="width: 300px; margin-top: 0px;"
-                />
-              </div>
-              <div class="column is-two-thirds">
-                <h2 class="title is-4">
-                  CollabVR: Reprojection-Based Edge-Client Collaborative
-                  Rendering for Real-Time High-Quality Mobile Virtual Reality
-                </h2>
-                <p style="color: grey">
-                  Zhihui Ke, <b>Dadong Jiang</b>, Hao Yan,
-                  <a style="color: grey" href="https://liaex.github.io/">Xiaobo Zhou*</a>
-                </p>
-                <!-- [<a href="https://patrickddj.github.io/FlexiTex/">Project</a>] -->
-                <p>Accepted by <b>RTSS 2023</b></p>
-                <a
-                  href="https://www.computer.org/csdl/proceedings-article/rtss/2023/285700a304/1UjIqhJfVuw"
-                  >Paper</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </section>
-
-    <br /><br />
-    <section class="hero" id="teaser">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <h2 class="title is-1">Projects</h2>
-        </div>
-
-        <div class="rows is-mobile is-centered">
-          <div class="row is-mobile is-centered">
-            <div class="columns is-mobile is-centered">
-              <div class="column is-mobile is-centered">
-                <img
-                  src="images/javaee.png"
-                  style="width: 300px; height: 150px"
-                />
-              </div>
-              <div class="column is-two-thirds has-text-justified">
-                <h2 class="title is-4">Annotation-based MVC Web Framework</h2>
-                <p style="color: grey">
-                  Use Java Reflection API and Annotation to implement an IOC
-                  container and an MVC Web framework, implementing REST-style
-                  web services, using JSP as a view and handling file uploads.
-                </p>
-                <a href="https://github.com/PatrickDDj/MySpringMVC">Project</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <br />
-          <div class="row is-mobile is-centered">
-            <div class="columns is-mobile is-centered">
-              <div class="column is-mobile is-centered">
-                <img
-                  src="images/compiler.png"
-                  style="width: 300px; height: 150px"
-                />
-              </div>
-              <div class="column is-two-thirds has-text-justified">
-                <h2 class="title is-4">C-like Language Compiler</h2>
-                <p style="color: grey">
-                  Construct a basic compiler, and implement modules including
-                  lexical analysis, grammar analysis, semantic analysis and
-                  intermediate code generation
-                </p>
-                 <a
-                  href="https://github.com/PatrickDDj/CompilerProject2"
-                  >Lexical + Grammar Analyzer</a
-                > / <a
-                  href="https://github.com/PatrickDDj/CompilerProject3"
-                  >Semantic Analyzer</a
-                > /   <a
-                  href="https://github.com/PatrickDDj/CompilerProject4"
-                  >Code Generator</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <br />
-          <div class="row is-mobile is-centered">
-            <div class="columns is-mobile is-centered">
-              <div class="column is-mobile is-centered">
-                <img
-                  src="images/network.png"
-                  style="width: 300px; height: 150px"
-                />
-              </div>
-              <div class="column is-two-thirds has-text-justified">
-                <h2 class="title is-4">
-                  Open System Interconnection Network Model
-                </h2>
-                <p style="color: grey">
-                  Use socket to create tunnel & send message. An implement of
-                  Open System Interconnect (OSI) framwork, including application
-                  layer, presentation layer, session layer, transport layer,
-                  network layer, data link layer and physical layer.
-                </p>
-                 <a href="https://github.com/PatrickDDj/Tunnel-IP-in-IP"
-                  >Tunnel</a
-                > / <a href="https://github.com/PatrickDDj/Network_Project"
-                  >OSI</a
-                >
-              </div>
-            </div>
-          </div>
-
-          <br />
-          <div class="row is-mobile is-centered">
-            <div class="columns is-mobile is-centered">
-              <div class="column is-mobile is-centered">
-                <img
-                  src="images/chinadaily.png"
-                  style="width: 300px; height: 150px"
-                />
-              </div>
-              <div class="column is-two-thirds has-text-justified">
-                <h2 class="title is-4">
-                  Sentiment Analysis of <i>People's Daily</i> Implemented by
-                  Spark
-                </h2>
-                <p style="color: grey">
-                  A big data analysis project based on the Spark framework to
-                  implement automatic text crawling and storage, and real-time
-                  sentiment analysis and trend statistics based on MapReduce.
-                </p>
-                <a href="https://github.com/PatrickDDj/ChinaDaily">Project</a>
-              </div>
-            </div>
-          </div>
+    <div class="pub">
+      <div class="pub-thumb"><img src="images/collabvr.png" alt="CollabVR" /></div>
+      <div class="pub-body">
+        <h3>CollabVR: Reprojection-Based Edge-Client Collaborative Rendering for Real-Time High-Quality Mobile Virtual Reality</h3>
+        <div class="authors">Zhihui Ke, <strong>Dadong Jiang</strong>, Hao Yan, Xiaobo Zhou</div>
+        <div class="venue">RTSS 2023</div>
+        <div class="pub-links">
+          <a href="https://www.computer.org/csdl/proceedings-article/rtss/2023/285700a304/1UjIqhJfVuw" target="_blank">Paper</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <br />
-    <br /><br />
+  </div>
+</section>
 
+<!-- ── Projects ── -->
+<section>
+  <hr />
+  <h2>Projects</h2>
+  <div class="project-list">
 
-    <br /><br />
-    <br /><br />
-    <br /><br />
-  </body>
+    <div class="project-card">
+      <img src="images/javaee.png" alt="MVC Framework" />
+      <h3>Annotation-based MVC Web Framework</h3>
+      <p>Java Reflection &amp; Annotations IOC container and MVC framework supporting REST services, JSP views, and file uploads.</p>
+      <div class="project-links">
+        <a href="https://github.com/PatrickDDj/MySpringMVC" target="_blank">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="images/compiler.png" alt="Compiler" />
+      <h3>C-like Language Compiler</h3>
+      <p>Implements lexical analysis, grammar, semantic analysis, and intermediate code generation modules.</p>
+      <div class="project-links">
+        <a href="https://github.com/PatrickDDj" target="_blank">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="images/network.png" alt="OSI Network" />
+      <h3>Open System Interconnection Network Model</h3>
+      <p>Socket-based tunnel and messaging system implementing OSI framework layers (IP-in-IP tunnel).</p>
+      <div class="project-links">
+        <a href="https://github.com/PatrickDDj" target="_blank">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="images/chinadaily.png" alt="Sentiment Analysis" />
+      <h3>Sentiment Analysis via Spark</h3>
+      <p>Big data project using Spark for text crawling, storage, and real-time sentiment analysis with MapReduce on People's Daily.</p>
+      <div class="project-links">
+        <a href="https://github.com/PatrickDDj/ChinaDaily" target="_blank">GitHub →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>Last updated: May 2026 &nbsp;·&nbsp; Dadong Jiang</p>
+</footer>
+
+</body>
 </html>
