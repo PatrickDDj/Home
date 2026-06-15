@@ -6,7 +6,7 @@ generate thumbnails, and output a JSON manifest.
 import os, json, colorsys
 from PIL import Image
 
-IMAGES_DIR = "images"
+IMAGES_DIR = "gallery"
 THUMBS_DIR = "thumbs"
 THUMB_SIZE = (400, 400)
 
